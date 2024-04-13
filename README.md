@@ -21,13 +21,38 @@
    ```bash
    yarn
    ```
-2. Get Pusher credentials and Setup Google credentials
+2. Get Pusher credentials and
+
+   1. Create a pusher account at https://pusher.com/
+   2. Create a new app
+      Click Get Started or Manage/Create appon the Channel tab
+      Enter the app name
+      Select a cluster. Pick the one closest to you, i.e. ap3(Asia Pacific (Tokyo))
+      Click Create app
+   3. Go to App Keys tab, you will see the following keys:
+      
+      * `app_id`
+      * `key`
+      * `secret`
+      * `cluster`
+      
+   4. Copy these keys to your .env.local file:
+      ```
+      PUSHER_ID=<app_id>
+      NEXT_PUBLIC_PUSHER_KEY=<key>
+      PUSHER_SECRET=<secret>
+      NEXT_PUBLIC_PUSHER_CLUSTER=<cluster>
+      ```
+   5. NEXT_PUBLIC prefix is required for the client side to access the env variable.
+      Also, please remember to add these keys to your environment variables handler in src/lib/env/private.ts and src/lib/env/public.ts. You can view those two files for more details.
+   6. Go to App Settings tab, scroll down to Enable authorized connections and enable it. Note: If you enable the Enable client events option, every connection will last only 30 seconds if not authorized. So if you just want to do some experiments, you might need to disable this option.
+   
+   You can refer to the [Pusher Setup](https://github.com/ntuee-web-programming/112-1-unit2-notion-clone#pusher-setup) section in Notion Clone README for more details.
+
+4. Setup Google credentials
 
    Please refer to the [Google Setup](https://developers.google.com/identity/protocols/oauth2/web-server?hl=zh-tw)
-
-   Please refer to the [Pusher Setup](https://github.com/ntuee-web-programming/112-1-unit2-notion-clone#pusher-setup) section in Notion Clone README for more details.
-
-3. Create `.env.local` file in the project root and add the following content:
+5. Create `.env.local` file in the project root and add the following content:
 
    ```
    POSTGRES_URL=postgres://postgres:postgres@localhost:5432/traveler
@@ -46,18 +71,18 @@
 
 
 
-4. Start the database
+6. Start the database
    ```bash
    docker compose up -d
    ```
 
-5. Run migrations
+7. Run migrations
    ```bash
    yarn migrate
    ```
-6. Start the development server
+8. Start the development server
    ```bash
    yarn dev
    ```
-7. Open http://localhost:3000 in your browser
+9. Open http://localhost:3000 in your browser
 
