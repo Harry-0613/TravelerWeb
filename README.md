@@ -1,9 +1,25 @@
+# TravelerWeb
+
+It's my side project, which is a web platform that can provide travel planning. I used GitHub Copilot to quickly build a web service and deploy the database through Docker. furthermore, this website using the WebSocket makes users edit the same travel plan together in real time.
+
+The following tools were used in this project:
+* [NextJS](https://nextjs.org/) - The React Framework for the Web
+* [Postgres DB](https://www.postgresql.org/) - The World's Most Advanced Open Source Relational Database
+* [Docker](https://www.docker.com/) - Accelerated Container Application Development
+
+
+---
+:link:[Demo Link](traveler-web-flax.vercel.app)
+
+:skull:Since the demo is deployed on a free platform, the response speed is very slow, so whether it is automatically redirecting or adding anything, you may need to wait for a while.
+
+
 ### Login Interface
-<img width="1116" alt="image" src="https://github.com/Tomlord1122/Traveler/assets/79390871/ad591a60-e1d3-4508-aaa9-ca33d7772524">
+<img width="1226" alt="login" src="https://github.com/x90613/TravelerWeb/assets/100923612/fda08e7c-8eac-4b5c-a75b-508f1e82cfa8">
 
 
 ### Main System
-<img width="1174" alt="image" src="https://github.com/Tomlord1122/Traveler/assets/79390871/3fb1a457-e6f4-421b-b404-7cc56caa3b09">
+<img width="1226" alt="login" src="https://github.com/x90613/TravelerWeb/assets/100923612/b705f598-807f-46e8-8876-3faa55b6b6f8">
 
 
 1. You can add a new plan.
