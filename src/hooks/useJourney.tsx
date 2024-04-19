@@ -20,20 +20,11 @@ type PusherPayload = {
 type JourneyContextType = {
   journeys: any;
   currentPlan: any;
-  addJourney: any;
-  deleteJourney: any;
-  updateJourney: any;
-  exportJourney: any;
+  addJourney: (title: string, start: string, end: string, location: string, note: string) => Promise<any>;
+  deleteJourney: (journeyId: string) => Promise<any>;
+  updateJourney: (journeyId: string, title: string, start: string, end: string, location: string, note: string) => Promise<any>;
+  exportJourney: () => Promise<void>;
 };
-
-// type JourneyContextType = {
-//   journeys: any;
-//   currentPlan: any;
-//   addJourney: (title: string, start: string, end: string, location: string, note: string) => Promise<any>;
-//   deleteJourney: (journeyId: string) => Promise<any>;
-//   updateJourney: (journeyId: string, title: string, start: string, end: string, location: string, note: string) => Promise<any>;
-//   exportJourney: () => Promise<void>;
-// };
 
 const JourneyContext = createContext<JourneyContextType | null>(null);
 

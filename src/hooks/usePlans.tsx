@@ -13,12 +13,13 @@ import { useParams, useRouter } from "next/navigation";
 
 type PlansContextType = {
   plans: any;
-  fetchPlans: any;
-  deletePlan: any;
-  addPlan: any;
-  updatePlan: any;
-  sharePlan: any;
+  fetchPlans: () => Promise<void>;
+  deletePlan: (planId: string) => Promise<any>;
+  addPlan: (planName: string, description: string) => Promise<any>;
+  updatePlan: (planId: string, planName: string, planDescription: string) => Promise<any>;
+  sharePlan: (planId: string, email: string) => Promise<any>;
 };
+
 
 const PlansContext = createContext<PlansContextType | null>(null);
 

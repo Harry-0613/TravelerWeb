@@ -49,13 +49,12 @@ export default function ShareButton() {
         return false;
       }
 
-      // if (ret.status === 'User already associated with the plan') {
-      //   alert("User already associated with the plan");
-      //   return false;
-      // }
+      if (ret.status === 'User already associated with the plan') {
+        alert("User already associated with the plan");
+        return false;
+      }
 
       setModalOpen(false);
-
       router.push(`/plan/${currentPlan.planId}`);
     } catch (e) {
       console.error(e);

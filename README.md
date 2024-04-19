@@ -6,7 +6,9 @@ The following tools were used in this project:
 * [NextJS](https://nextjs.org/) - The React Framework for the Web
 * [Postgres DB](https://www.postgresql.org/) - The World's Most Advanced Open Source Relational Database
 * [Docker](https://www.docker.com/) - Accelerated Container Application Development
-
+* [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML
+* [Material UI](https://mui.com/material-ui/) - The React component library you always wanted
+* [Pusher](https://pusher.com/) - WebSockets with Pusher
 
 ---
 :link:[Demo Link](traveler-web-flax.vercel.app)
@@ -65,10 +67,10 @@ The following tools were used in this project:
    
    You can refer to the [Pusher Setup](https://github.com/ntuee-web-programming/112-1-unit2-notion-clone#pusher-setup) section in Notion Clone README for more details.
 
-4. Setup Google credentials
+3. Setup Google credentials
 
    Please refer to the [Google Setup](https://developers.google.com/identity/protocols/oauth2/web-server?hl=zh-tw)
-5. Create `.env.local` file in the project root and add the following content:
+4. Create `.env.local` file in the project root and add the following content:
 
    ```
    POSTGRES_URL=postgres://postgres:postgres@localhost:5432/traveler
@@ -87,18 +89,23 @@ The following tools were used in this project:
 
 
 
-6. Start the database
+5. Start the database
    ```bash
    docker compose up -d
    ```
 
-7. Run migrations
+6. Run migrations
    ```bash
    yarn migrate
    ```
-8. Start the development server
+7. Start the development server
    ```bash
    yarn dev
    ```
-9. Open http://localhost:3000 in your browser
+8. Open http://localhost:3000 in your browser
+
+9. You can view the data in the database.
+   ```bash
+   yarn studio
+   ```
 
