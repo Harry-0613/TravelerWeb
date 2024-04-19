@@ -11,7 +11,7 @@ The following tools were used in this project:
 * [Pusher](https://pusher.com/) - WebSockets with Pusher
 
 ---
-:link:[Demo Link](traveler-web-flax.vercel.app)
+:link:[Demo Link](https://traveler-web-flax.vercel.app/)
 
 :skull:Since the demo is deployed on a free platform, the response speed is very slow, so whether it is automatically redirecting or adding anything, you may need to wait for a while.
 
