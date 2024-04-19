@@ -93,11 +93,11 @@ function JourneyItem({
     try {
       const ret = await updateJourney(
         journeyId,
-        title,
-        start,
-        end,
-        location,
-        note,
+        title ?? '',
+        start ?? '',
+        end ?? '', // Provide a default value for the 'end' parameter
+        location ?? '', // Provide a default value for the 'location' parameter
+        note ?? '', // Provide a default value for the 'note' parameter
       );
       if (!ret.journey && !ret.ok) {
         const body = await ret.json();
