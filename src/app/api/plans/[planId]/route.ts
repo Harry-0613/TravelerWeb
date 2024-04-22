@@ -8,7 +8,6 @@ import { plansTable, usersTable, usersToPlansTable } from "@/db/schema";
 import { auth } from "@/lib/auth";
 import { privateEnv } from "@/lib/env/private";
 import { publicEnv } from "@/lib/env/public";
-import { stat } from "fs";
 
 // DELETE /api/plans/:planId
 export async function DELETE(

@@ -24,7 +24,7 @@ type PlanItemProps = {
   description: string;
 };
 
-export default function PlanItem({ planId, name, description }: PlanItemProps) {
+export default function PlanItem({ planId, name}: PlanItemProps) {
   const { deletePlan } = usePlans();
   const currentPlanId = useParams().planId;
 

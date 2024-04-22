@@ -15,7 +15,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useJourney } from "@/hooks/useJourney";
 
-import PlaceAutocomplete from "./PlaceAutocomplete";
 
 export default function AddJourneyButton() {
   const [modalOpen, setModalOpen] = useState(false);

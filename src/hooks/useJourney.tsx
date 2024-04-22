@@ -212,6 +212,7 @@ export function JourneyProvider({ children }: { children: React.ReactNode }) {
         planId: planId,
       }),
     });
+    return res;
   };
 
   return (

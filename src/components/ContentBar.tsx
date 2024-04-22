@@ -81,7 +81,7 @@ export default function ContentBar() {
 function ContentBarHeader({
   currentPlan,
 }: {
-  currentPlan: any;
+  currentPlan: {description: string; plan: {name: string}} | undefined;
   userId: string | undefined;
 }) {
   const currentPlanName = currentPlan?.plan.name; // 沒有時，留白
