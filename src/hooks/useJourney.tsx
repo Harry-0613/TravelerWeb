@@ -212,7 +212,8 @@ export function JourneyProvider({ children }: { children: React.ReactNode }) {
         planId: planId,
       }),
     });
-    return res;
+    const data = await res.json();
+    return data;
   };
 
   return (
